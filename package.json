@@ -1,0 +1,23 @@
+{
+  "name": "webpack-simple-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "node js/scripts.js",
+    "build": "NODE_ENV=production webpack",
+    "app-built": "node js/scripts.min.js ",
+    "stats": "NODE_ENV=production webpack  --json > stats2.json",
+    "analyse": "webpack-bundle-analyzer stats2.json",
+    "all": "npm run app && npm run stats && npm run analyse"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "redux-actions": "^0.12.0",
+    "webpack": "^1.15.0",
+    "webpack-bundle-analyzer": "^2.4.0"
+  }
+}
